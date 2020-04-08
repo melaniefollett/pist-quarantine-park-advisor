@@ -1,3 +1,41 @@
+// Animation for header text
+let textWrapperHeader = document.querySelector(".page-header");
+textWrapperHeader.innerHTML = textWrapperHeader.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.page-header .letter',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 2250,
+    delay: (el, i) => 150 * (i+1)
+  }).add({
+    targets: '.page-header',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+
+// Animation for header tagline
+let textWrapperTagline = document.querySelector(".page-tagline");
+textWrapperTagline.innerHTML = textWrapperTagline.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.page-tagline .letter',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 2250,
+    delay: (el, i) => 150 * (i+1)
+  }).add({
+    targets: '.page-tagline',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+
 
 let svgWidth = 1200;
 let svgHeight = 650;
@@ -93,7 +131,7 @@ function updateToolTip(chosenYAxis, barsGroup) {
 }
 
 // Retrieve data from the CSV file and execute everything below
-d3.csv("assets/data/info.csv").then(function(parkData, err) {
+d3.csv("data/features.csv").then(function(parkData, err) {
   if (err) throw err;
   
   // parse data
@@ -138,7 +176,7 @@ d3.csv("assets/data/info.csv").then(function(parkData, err) {
     .attr("y", d => yLinearScale(d[chosenYAxis]))
     .attr("width", xLinearScale.bandwidth())
     .attr("height", d => height - yLinearScale(d[chosenYAxis]))
-    .attr("fill", "#28A745");
+    .attr("fill", "#28a745");
 
   // Create group for x/y axis labels
   let xlabelsGroup = chartGroup.append("g")
