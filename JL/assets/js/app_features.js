@@ -138,7 +138,7 @@ d3.csv("assets/data/info.csv").then(function(parkData, err) {
     .attr("y", d => yLinearScale(d[chosenYAxis]))
     .attr("width", xLinearScale.bandwidth())
     .attr("height", d => height - yLinearScale(d[chosenYAxis]))
-    .attr("fill", "lightblue");
+    .attr("fill", "#28A745");
 
   // Create group for x/y axis labels
   let xlabelsGroup = chartGroup.append("g")

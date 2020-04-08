@@ -31,3 +31,31 @@ body {
   font-size: 16px;
 }
 
+
+.masthead {
+  height: 50vh;
+  min-height: 500px;
+  background-image: url('https://images.pexels.com/photos/1687845/pexels-photo-1687845.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page-header {
+  font-weight: 700;
+  font-size: 3.5em;
+  color: #28a745;
+}
+
+.page-tagline {
+  font-weight: 300;
+  font-size: 2.5em;
+  color: white
+}
+
+
+
+
+
+
+  
