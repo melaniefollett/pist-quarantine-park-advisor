@@ -48,7 +48,7 @@ let smallIcon = new L.Icon({
   iconSize: [30, 30],
   iconAnchor: [13, 27],
   popupAnchor:  [1, -24],
-  iconUrl: "tree1.png"
+  iconUrl: 'images/tree1.png'
 });
 
 // Add a tile layer
@@ -60,7 +60,7 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 }).addTo(myMap);
 
 // loading geoJSON
-$.getJSON("parks.geojson",function(data){
+$.getJSON('data/parks.geojson',function(data){
   let datalayer = L.geoJSON(data, {
     onEachFeature: function (f, l) {
       l.bindPopup('<pre>'+JSON.stringify(f.properties,null,' ').replace(/[\{\}"]/g,'')+'</pre>');
