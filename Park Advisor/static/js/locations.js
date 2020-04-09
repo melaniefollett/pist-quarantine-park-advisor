@@ -1,6 +1,6 @@
 
 // Animation for header text
-let textWrapperHeader = document.querySelector(".wildlife-header");
+let textWrapperHeader = document.querySelector(".location-header");
 textWrapperHeader.innerHTML = textWrapperHeader.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
 anime.timeline({loop: true})
@@ -19,7 +19,7 @@ anime.timeline({loop: true})
   });
 
 // Animation for header tagline
-let textWrapperTagline = document.querySelector(".wildlife-tagline");
+let textWrapperTagline = document.querySelector(".location-tagline");
 textWrapperTagline.innerHTML = textWrapperTagline.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
 anime.timeline({loop: true})
