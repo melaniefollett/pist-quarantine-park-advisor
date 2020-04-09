@@ -677,13 +677,13 @@ button {
   font-size: inherit;
 }
 
-body {
+/* body {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   font: 16px/1.5 sans-serif;
-}
+} */
 
 .btn-group {
   text-align: center;
