@@ -38,7 +38,6 @@ anime.timeline({loop: true})
   });
 
 // Create a map object
-const API_KEY = "pk.eyJ1Ijoiam9uaXNhbnd1IiwiYSI6ImNrODF1eDFmYzB2YTgzZGxuOTBleXkwNTUifQ.zqgzvqAfHto27mM_q0dYZw";
 const myMap = L.map("map", {
   center: [37.09, -95.71],
   zoom: 5
